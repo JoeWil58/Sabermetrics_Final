@@ -14,7 +14,7 @@ Final project for CSCI 4831 - Sabermetrics
 I created a new statistic called "shift rating." This statistic evaluates how good a player is at "beating the shift" relative to the rest of Major League Baseball. This stat can be used to see how effective a shift is on a certain player, and influence a manager's decision to implement such an alignment. Alternatively, it can show a hitter that he is, perhaps, rarely beating the shift, and should change his approach when at the plate.  
 
 Shift rating is calculated by the following:  
-$$shift-rating = ((\dfrac{H + SF}{AB + SF} - shift_mean) / shift_point) + 100$$  
+shift-rating = (((H + SF)/(AB + SF) - shift_mean) / shift_point) + 100
 
 There are some interesting things to unpack here. In this calculation, H, SF, and AB stand for the hits, sacrifice flies, and at bats the player had while there was some sort of non-standard alignment. Shift_mean is the league average shift average and shift_point is the shift_mean / 100. Essentially, this calculation creates a number that has 100 as its average value, and each point increase or decrease from 100 equates to a 1% increase or decrease in that player's shift-beating ability. This is similar to park-adjusted statistics like ERA+ or wRC+, however, shift rating is not park adjusted.  
 
